@@ -20,7 +20,7 @@
 * 🎁 **[2025-11]** We release a lightweight [**4B model**](https://huggingface.co/stepfun-ai/GELab-Zero-4B-preview).
 * 🎁 **[2025-11]** We release the tasks from the [**AndroidDaily**](https://huggingface.co/stepfun-ai/AndroidDaily) benchmark.
 * 🎁 **[2025-11]** We release the current **GELab-Zero** engineering infrastructure.
-* 🎁 **[2025-10]** Our [research paper](https://github.com/summoneryhl/GE-Lab) on **Multi-Turn RL** is accepted by **NeurIPS 2025**.
+* 🎁 **[2025-10]** Our [research paper](https://openreview.net/pdf/ce35fb684e3b11b9c0f1fcc38598cfb3504c728e.pdf) on **Multi-Turn RL** is accepted by **NeurIPS 2025**.
 
 ## 📑 Table of Contents
 
@@ -479,3 +479,9 @@ If you find GELab-Zero useful for your research, please consider citing our work
 ## 📧 Contact
 
 For questions and support, please contact: [tankaijun@stepfun.com]
+
+You can contact us and communicate with us by joining our WeChat group:
+
+| WeChat Group |
+|:-------------------------:|
+| <img src="images/wechat_group.jpeg" width="200" height="400"> |

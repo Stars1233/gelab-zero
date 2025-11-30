@@ -23,7 +23,7 @@
 *   🎁 **[2025-11]** 我们发布了轻量级的 [**4B 模型**](https://huggingface.co/stepfun-ai/GELab-Zero-4B-preview)。
 *   🎁 **[2025-11]** 我们发布了来自 [**AndroidDaily**](https://huggingface.co/stepfun-ai/AndroidDaily) 基准测试的任务。
 *   🎁 **[2025-11]** 我们发布了当前的 **GELab-Zero** 工程基础设施。
-*   🎁 **[2025-10]** 我们关于 **Multi-Turn RL** 的[研究论文](https://github.com/summoneryhl/GE-Lab)被 **NeurIPS 2025** 接收。
+*   🎁 **[2025-10]** 我们关于 **Multi-Turn RL** 的[研究论文](https://openreview.net/pdf/ce35fb684e3b11b9c0f1fcc38598cfb3504c728e.pdf)被 **NeurIPS 2025** 接收。
 
 ## 📑 目录
 
@@ -445,3 +445,9 @@ streamlit run --server.address 127.0.0.1 visualization/main_page.py --server.por
 ## 📧 联系方式
 
 如有问题或需要支持，请联系：[tankaijun@stepfun.com]
+
+欢迎加入我们的微信群组进行沟通交流：
+
+| 微信群组 |
+|:-------------------------:|
+| <img src="images/wechat_group.jpeg" width="200" height="400"> |
