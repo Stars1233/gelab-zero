@@ -50,7 +50,8 @@ if __name__ == "__main__":
 
     # task = "打开微信，给柏茗，发helloworld"
     # task = "打开 给到 app，在主页，下滑寻找，员工权益-奋斗食代，帮我领劵。如果不能领取就退出。"
-    task = "open wechat to send a message 'helloworld' to 'TKJ'"
+    # task = "open wechat to send a message 'helloworld' to 'TKJ'"
+    task = "去淘宝帮我买本书"
 
     tmp_rollout_config = local_model_config
 
