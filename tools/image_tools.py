@@ -91,11 +91,10 @@ def draw_points(image_path, image_path_save, points, color=(255, 0, 0, 128), ret
         return drawrd_image
 
     else:
-
         with smart_open(image_path_save, "wb") as f:
             image.save(f, "PNG")
         
-        return image_path
+        return image_path_save
 
 if __name__ == "__main__":
     # Example usage

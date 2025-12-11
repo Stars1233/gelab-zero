@@ -422,7 +422,9 @@ def gui_agent_loop(
             return_log['intermediate_logs'] = []
         pass
 
-    if action['action_type'].upper() == 'COMPLETE':
+    if stop_reason in ['MANUAL_STOP_SCREEN_OFF', 'INFO_ACTION_NEEDS_REPLY', "NOT_STARTED"]:
+        pass
+    elif  action['action_type'].upper() == 'COMPLETE':
         stop_reason = "TASK_COMPLETED_SUCCESSFULLY"
     elif action['action_type'].upper() == 'ABORT':
         stop_reason = "TASK_ABORTED_BY_AGENT"
