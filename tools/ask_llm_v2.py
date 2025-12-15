@@ -108,6 +108,6 @@ def ask_llm_anything(model_provider, model_name, messages, args= {
     if reasoning is not None and len(reasoning) > 0:
         result = "<think>" + reasoning + "</think>" + "\n" + result
 
-    print(f"LLM {model_name} says:\n--------------start--------------\n{result}\n---------------end---------------")
+    # print(f"LLM {model_name} says:\n--------------start--------------\n{result}\n---------------end---------------")
 
     return result

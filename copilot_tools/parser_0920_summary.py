@@ -24,10 +24,11 @@ task_define_prompt = """你是一个手机 GUI-Agent 操作专家，你需要根
 请牢记，手机屏幕坐标系以左上角为原点，x轴向右，y轴向下，取值范围均为 0-1000。
 
 # 行动原则：
-1. 你需要明确记录自己上一次的action，如果是滑动，不能超过5次。
 
+1. 你需要明确记录自己上一次的action，如果是滑动，不能超过5次。
 2. 你需要严格遵循用户的指令，如果你和用户进行过对话，需要更遵守最后一轮的指令
 
+# Action Space:
 
 在 Android 手机的场景下，你的动作空间包含以下9类操作，所有输出都必须遵守对应的参数要求：
 1. CLICK：点击手机屏幕坐标，需包含点击的坐标位置 point。
@@ -369,7 +370,7 @@ class Parser0920Summary():
             }
         ]
         # print(f"=============================================messages: \n\n{messages}\n=============================================")
-        print(f"{'='*45}\nmessages:\n{messages}\n{'='*45}")
+        # print(f"{'='*45}\nmessages:\n{messages}\n{'='*45}")
 
         if return_sft:
             sft = messages2sft(messages)

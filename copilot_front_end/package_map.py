@@ -39,6 +39,7 @@ package_name_map = {
     "点淘": "com.taobao.live",
     "录音": "com.coloros.soundrecorder",
     "哔哩哔哩": "tv.danmaku.bili",
+    "B站": "tv.danmaku.bili",
     "soul": "cn.soulapp.android",
     "高德地图": "com.autonavi.minimap",
     "懂车帝": "com.ss.android.auto",
