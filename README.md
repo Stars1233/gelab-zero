@@ -20,7 +20,7 @@
 
 * 🎁 **[2025-12-18]** We release **Step-GUI Technical Report** on [**arXiv**](https://arxiv.org/abs/2512.15431)!
 * 🎁 **[2025-12-18]** We release a more powerful **API** for GUI automation tasks. [Apply for API access here](https://wvixbzgc0u7.feishu.cn/share/base/form/shrcnNStxEmuE7aY6jTW07CZHMf)!
-* 🎁 **[2025-12-12]** We release **MCP-Server** support for multi-device management and task distribution. See [Installation & Quick Start](#-installation-quick-start) for setup instructions.
+* 🎁 **[2025-12-12]** We release **MCP-Server** support for multi-device management and task distribution. See [Installation & Quick Start](#-installation-quick-start) and [MCP-Server Setup](#optional-mcp-server-setup) for setup instructions.
 * 🎁 **[2025-12-1]** We thank the following projects and authors for providing quantization tools & tutorials: [GGUF_v1](https://huggingface.co/bartowski/stepfun-ai_GELab-Zero-4B-preview-GGUF), [GGUF_v2](https://huggingface.co/noctrex/GELab-Zero-4B-preview-GGUF), [EXL3](https://huggingface.co/ArtusDev/stepfun-ai_GELab-Zero-4B-preview-EXL3), [Tutorials_CN](http://xhslink.com/o/1WrmgHGWFYh), [Tutorials_EN](https://www.youtube.com/watch?v=4BMiDyQOpos)
 * 🎁 **[2025-11-31]** We release a lightweight **4B** model GELab-Zero-4B-preview on [**Hugging Face**](https://huggingface.co/stepfun-ai/GELab-Zero-4B-preview) and [**Model Scope**](https://modelscope.cn/models/stepfun-ai/GELab-Zero-4B-preview).
 * 🎁 **[2025-11-31]** We release the tasks from the [**AndroidDaily**](https://huggingface.co/datasets/stepfun-ai/AndroidDaily) benchmark.
@@ -49,19 +49,24 @@ You can contact us and communicate with us by joining our WeChat group:
 
 
 ## 📖 Background
-As AI experiences increasingly penetrate consumer-grade devices, Mobile Agent research is at a critical juncture: transitioning from **"feasibility verification"** to **"large-scale application."** While GUI-based solutions offer universal compatibility, the fragmentation of mobile ecosystems imposes heavy engineering burdens that hinder innovation. GELab-Zero is designed to dismantle these barriers.
 
-* ⚡️ **Out-of-the-Box Full-Stack Infrastructure** 
-Resolves the fragmentation of the mobile ecosystem with a unified, one-click inference pipeline. It automatically handles multi-device ADB connections, dependencies, and permissions, allowing developers to focus on strategic innovation rather than engineering infrastructure.
+As AI experiences continue to penetrate consumer-grade terminal devices, mobile Agent research is at a critical juncture transitioning from "feasibility verification" to "large-scale application." GUI-based solutions have emerged as the optimal approach for the current stage in addressing complex mobile ecosystems and achieving scalable Agent capabilities, thanks to their universal compatibility with all apps and zero-cost integration without requiring app vendor adaptation. However, due to the highly fragmented nature of mobile application ecosystems, getting GUI Agents to truly work across different brands and device models often faces numerous engineering challenges: multi-device ADB connections, dependency installation, permission configuration, inference service deployment, task recording and replay. This means Agent developers and MCP users need to handle substantial engineering infrastructure work, making it difficult to focus on strategic innovation.
 
-* 🖥️ **Consumer-Grade Local Deployment** 
-Features a built-in 4B GUI Agent model **fully optimized for Mac (M-series) and NVIDIA RTX 4060**. It supports complete local execution, ensuring data privacy and low latency on standard consumer hardware.
+To address this challenge, we are open-sourcing GELab-Zero to accelerate the innovation and application deployment of GUI Agents. It consists of two main components:
 
-* 📱 **Flexible Task Distribution & Orchestration** 
-Supports distributing tasks across multiple devices with interaction trajectory recording. It offers three versatile modes—ReAct loops, multi-agent collaboration, and scheduled tasks—to handle complex, real-world business scenarios.
+- Plug-and-play complete inference engineering infrastructure that handles all the heavy lifting
+- A 4B GUI Agent model capable of running on local computer
 
-* 🚀 **Accelerate from Prototype to Production** 
-Empowers developers to rapidly validate interaction strategies while allowing enterprises to directly reuse the underlying infrastructure for zero-cost MCP integration, bridging the critical gap between "feasibility verification" and "large-scale application."
+It provides a one-click launch experience similar to open-source GUI Agent MCP, can be deployed entirely locally, and puts the entire inference pipeline under your complete control. Specific capabilities include:
+
+- **Local Deployment**: Supports 4B-scale models running on consumer-grade hardware, balancing low latency with privacy.
+- **One-click Launch**: Provides unified deployment pipeline that automatically handles environment dependencies and device management.
+- **Task Distribution**: Can distribute tasks to multiple phones while recording interaction trajectories for observability and reproducibility.
+- **Three Agent Modes**: Covers multiple working modes including ReAct loops, multi-agent collaboration, and scheduled tasks.
+
+These capabilities enable GELab-Zero to flexibly handle complex task flows in real-world scenarios and provide a solid foundation for future extensions.
+
+For Agent developers, this infrastructure enables rapid testing of new ideas and strategies, validating interaction approaches; for enterprise users, it allows direct reuse of this infrastructure to quickly integrate MCP capabilities into product business.
 
 ## 🎥 Application Demonstrations
 
@@ -467,23 +472,23 @@ Download the [Jan](https://github.com/janhq/jan/releases) client and install it.
 
 Go to Settings → Model Provider → choose llama.cpp, then import the models:
 
-<img src="images/jan_1.png" width="50%" alt="test model">
+![Import model](images/jan_1.png)
 
 Select the two GGUF files you just converted:
 
-<img src="images/jan_2.png" width="50%" alt="test model">
+![Import model](images/jan_2.png)
 
 Back in the model UI, click `Start`.
 
 Create a chat to verify the model runs correctly:
 
-<img src="images/jan_3.png" width="50%" alt="test model">
+![test model](images/jan_3.png)
 
 Once tokens are streaming normally, start the local API server.
 
 Go to Settings → Local API Server, create an API key under server configuration, then launch the service:
 
-<img src="images/jan_4.png" width="50%" alt="test model">
+![make API service](images/jan_4.png)
 
 #### Step 3: Adjust GELab-Zero Agent model config
 
